@@ -1,0 +1,236 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-normal);
+  padding: 0 24px;
+  background: rgba(7, 8, 11, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbarScrolled {
+  background: rgba(7, 8, 11, 0.92);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--border-subtle);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  height: 72px;
+}
+
+.navContainer {
+  width: 100%;
+  max-width: 1380px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.logoText {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: var(--text-main);
+  text-transform: uppercase;
+}
+
+.logoDot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-lime);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--accent-lime);
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+
+.navItem {
+  position: relative;
+}
+
+.navLink {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+  padding: 6px 0;
+  display: inline-block;
+  background: none;
+  border: none;
+}
+
+.navLink:hover {
+  color: var(--text-main);
+}
+
+.activeLink {
+  color: var(--accent-lime);
+  font-weight: 700;
+}
+
+.activeIndicator {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent-lime);
+  border-radius: 2px;
+  box-shadow: 0 0 12px var(--accent-lime);
+}
+
+/* CV Action Buttons Group */
+.cvBtnGroup {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 6px;
+}
+
+.viewCvBtn {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accent-lime);
+  background: rgba(204, 255, 0, 0.08);
+  border: 1px solid rgba(204, 255, 0, 0.3);
+  padding: 7px 14px;
+  border-radius: 6px;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.viewCvBtn:hover {
+  background: var(--accent-lime);
+  color: var(--text-dark);
+  box-shadow: 0 0 15px var(--accent-lime-glow);
+}
+
+.downloadCvBtn {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-subtle);
+  padding: 7px 14px;
+  border-radius: 6px;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.downloadCvBtn:hover {
+  border-color: var(--accent-lime);
+  color: var(--accent-lime);
+  background: rgba(204, 255, 0, 0.05);
+}
+
+.hireButton {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-dark);
+  background: var(--accent-lime);
+  padding: 8px 18px;
+  border-radius: 6px;
+  transition: all var(--transition-fast);
+  box-shadow: 0 0 15px var(--accent-lime-glow);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hireButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(204, 255, 0, 0.5);
+  background: #d8ff33;
+}
+
+.mobileMenuBtn {
+  display: none;
+  color: var(--text-main);
+  font-size: 1.5rem;
+  z-index: 1001;
+}
+
+/* 1024px Responsive Breakpoint Optimization */
+@media screen and (max-width: 1024px) {
+  .mobileMenuBtn {
+    display: block;
+  }
+
+  .navLinks {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 85%;
+    max-width: 380px;
+    height: 100vh;
+    background: rgba(14, 15, 20, 0.97);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 32px;
+    gap: 20px;
+    transition: right var(--transition-normal);
+    border-left: 1px solid var(--border-subtle);
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.8);
+  }
+
+  .navLinksOpen {
+    right: 0;
+  }
+
+  .navLink {
+    font-size: 0.95rem;
+  }
+
+  .cvBtnGroup {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin: 10px 0;
+  }
+
+  .viewCvBtn, .downloadCvBtn {
+    width: 100%;
+    justify-content: center;
+    padding: 12px;
+    font-size: 0.85rem;
+  }
+}

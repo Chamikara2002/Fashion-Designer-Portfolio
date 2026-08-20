@@ -1,0 +1,37 @@
+/* Design System Variables & Color Tokens */
+:root {
+  /* Color Palette */
+  --bg-dark: #07080b;
+  --bg-surface: #0e0f14;
+  --bg-card: rgba(18, 19, 26, 0.65);
+  --bg-card-hover: rgba(26, 28, 38, 0.85);
+  --bg-glass: rgba(14, 15, 20, 0.7);
+  
+  /* Accents */
+  --accent-lime: #ccff00;
+  --accent-lime-dim: #99cc00;
+  --accent-lime-glow: rgba(204, 255, 0, 0.25);
+  --accent-cyan: #00f0ff;
+  --accent-gold: #e2c044;
+  
+  /* Text */
+  --text-main: #f8f9fa;
+  --text-secondary: #a0a2b1;
+  --text-dark: #07080b;
+  
+  /* Borders & Shadows */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-active: rgba(204, 255, 0, 0.4);
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  --shadow-lime: 0 0 25px rgba(204, 255, 0, 0.3);
+  
+  /* Fonts */
+  --font-heading: 'Syne', 'Bodoni Moda', 'Playfair Display', serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Space Mono', 'Fira Code', monospace;
+  
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}

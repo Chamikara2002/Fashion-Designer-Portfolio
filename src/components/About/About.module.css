@@ -1,0 +1,240 @@
+.aboutSection {
+  background: transparent;
+  position: relative;
+  text-align: center;
+}
+
+.tiltCard {
+  position: relative;
+  border-radius: 24px;
+  background: rgba(18, 19, 26, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-subtle);
+  transform-style: preserve-3d;
+  transform: perspective(1000px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg)) scale(var(--card-scale, 1));
+  transition: transform 0.15s ease-out, border-color var(--transition-fast), box-shadow var(--transition-fast);
+  overflow: hidden;
+  text-align: center;
+}
+
+.tiltCard:hover {
+  border-color: var(--accent-lime);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 30px var(--accent-lime-glow);
+}
+
+.cardInner {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cardGlare {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at var(--glare-x, 50%) var(--glare-y, 50%),
+    rgba(255, 255, 255, 0.12) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Grid Layout */
+.gridTop {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 28px;
+  margin-bottom: 28px;
+  width: 100%;
+}
+
+.gridBottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 28px;
+  width: 100%;
+}
+
+/* Redesigned Interactive Profile Portrait Card (Matching reference structure) */
+.heroImgCard {
+  min-height: 480px;
+  padding: 16px;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid var(--border-active);
+  box-shadow: 0 0 35px var(--accent-lime-glow), inset 0 0 20px rgba(204, 255, 0, 0.15);
+  border-radius: 28px;
+  background: rgba(14, 15, 20, 0.9);
+}
+
+.imgFrame {
+  width: 100%;
+  height: 100%;
+  min-height: 440px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.heroImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.heroImgCard:hover .heroImg {
+  transform: scale(1.04);
+}
+
+/* Floating Bottom Glass Overlay Pill */
+.imgOverlayPill {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 48px);
+  padding: 16px 24px;
+  background: rgba(14, 15, 20, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--accent-lime);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px var(--accent-lime-glow);
+  z-index: 5;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pillName {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.pillRole {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent-lime);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.cardTag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: var(--accent-lime);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.cardTitle {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 12px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.cardBody {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  text-align: center;
+}
+
+.manifestoNumber {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: rgba(204, 255, 0, 0.15);
+  position: absolute;
+  top: 20px;
+  right: 24px;
+}
+
+.pedigreeList {
+  list-style: none;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.pedigreeItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-main);
+  text-align: center;
+}
+
+.bullet {
+  width: 6px;
+  height: 6px;
+  background: var(--accent-lime);
+  border-radius: 2px;
+}
+
+.cardIcon {
+  width: 44px;
+  height: 44px;
+  background: rgba(204, 255, 0, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-lime);
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sampleMedia {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-top: 16px;
+  border: 1px solid var(--border-subtle);
+}
+
+@media (max-width: 992px) {
+  .gridTop {
+    grid-template-columns: 1fr;
+  }
+  .gridBottom {
+    grid-template-columns: 1fr;
+  }
+  .heroImgCard {
+    min-height: 400px;
+  }
+}

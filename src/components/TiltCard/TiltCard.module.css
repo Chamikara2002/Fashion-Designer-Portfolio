@@ -1,0 +1,50 @@
+.tiltCard {
+  position: relative;
+  border-radius: 20px;
+  background: rgba(18, 19, 26, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-subtle);
+  perspective: 1000px;
+  will-change: transform;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+}
+
+.tiltCard:hover {
+  border-color: var(--accent-lime);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 30px var(--accent-lime-glow);
+}
+
+.cardInner {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cardGlare {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Touchscreen & Mobile Safety Rule: Disable 3D tilt layout shifts on touch devices */
+@media (hover: none), (max-width: 768px) {
+  .tiltCard {
+    transform: none !important;
+  }
+  .cardGlare {
+    display: none !important;
+  }
+}

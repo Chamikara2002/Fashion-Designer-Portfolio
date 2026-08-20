@@ -1,0 +1,284 @@
+.contactSection {
+  background: rgba(14, 15, 20, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  position: relative;
+  text-align: center;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 48px;
+  align-items: start;
+  width: 100%;
+}
+
+.infoCol {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: center;
+  text-align: center;
+}
+
+.whatsappCard {
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.12) 0%, rgba(18, 19, 26, 0.8) 100%);
+  border: 1px solid rgba(37, 211, 102, 0.4);
+  border-radius: 20px;
+  padding: 32px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  transition: all var(--transition-normal);
+}
+
+.whatsappCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(37, 211, 102, 0.3);
+  border-color: #25d366;
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.iconCircle {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: #25d366;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
+}
+
+.whatsappTitle {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-main);
+  text-align: center;
+}
+
+.whatsappNumber {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: #25d366;
+  font-weight: 700;
+  margin-top: 2px;
+  text-align: center;
+}
+
+.whatsappText {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.whatsappLinkBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px;
+  background: #25d366;
+  color: #ffffff;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  transition: all var(--transition-fast);
+  box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
+}
+
+.whatsappLinkBtn:hover {
+  background: #20bd5a;
+  transform: translateY(-2px);
+  box-shadow: 0 0 35px rgba(37, 211, 102, 0.6);
+}
+
+.emailDirectCard {
+  background: rgba(18, 19, 26, 0.8);
+  border: 1px solid var(--border-subtle);
+  border-radius: 20px;
+  padding: 32px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  width: 100%;
+  transition: all var(--transition-normal);
+}
+
+.emailDirectCard:hover {
+  border-color: var(--accent-lime);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 25px var(--accent-lime-glow);
+  transform: translateY(-4px);
+}
+
+.emailTitle {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.emailAddress {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--accent-lime);
+  word-break: break-all;
+  text-align: center;
+}
+
+/* Form Column */
+.formCard {
+  background: rgba(18, 19, 26, 0.85);
+  border: 1px solid var(--border-subtle);
+  border-radius: 24px;
+  padding: 40px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: var(--shadow-glass);
+  width: 100%;
+  text-align: center;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.formCard:hover {
+  border-color: var(--accent-lime);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 30px var(--accent-lime-glow);
+}
+
+.formTitle {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.input, .textarea, .select {
+  width: 100%;
+  padding: 14px 18px;
+  background: rgba(7, 8, 11, 0.6);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  outline: none;
+  transition: all var(--transition-fast);
+  text-align: center;
+}
+
+.input:focus, .textarea:focus, .select:focus {
+  border-color: var(--accent-lime);
+  box-shadow: 0 0 15px var(--accent-lime-glow);
+  background: rgba(14, 15, 20, 0.9);
+}
+
+.textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.submitBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 18px;
+  background: var(--accent-lime);
+  color: var(--text-dark);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  margin-top: 10px;
+  transition: all var(--transition-fast);
+  box-shadow: 0 0 25px var(--accent-lime-glow);
+}
+
+.submitBtn:hover {
+  background: #d8ff33;
+  transform: translateY(-2px);
+  box-shadow: 0 0 35px rgba(204, 255, 0, 0.5);
+}
+
+.successMessage {
+  padding: 24px;
+  background: rgba(204, 255, 0, 0.1);
+  border: 1px solid var(--accent-lime);
+  border-radius: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.successTitle {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--accent-lime);
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+}

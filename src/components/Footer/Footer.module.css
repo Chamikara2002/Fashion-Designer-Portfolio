@@ -1,0 +1,141 @@
+.footer {
+  background: #040507;
+  border-top: 1px solid var(--border-subtle);
+  padding: 80px 0 40px 0;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 60px;
+  text-align: center;
+  width: 100%;
+}
+
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.footerLogo {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: var(--text-main);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.footerSubname {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--accent-lime);
+  text-align: center;
+}
+
+.brandDesc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 380px;
+  text-align: center;
+}
+
+.colTitle {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-main);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.linkList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.footerLink {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-align: center;
+  padding: 0;
+}
+
+.footerLink:hover {
+  color: var(--accent-lime);
+}
+
+.contactInfoItem {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.bottomBar {
+  padding-top: 32px;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  flex-wrap: wrap;
+  gap: 16px;
+  text-align: center;
+}
+
+.backToTopBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--accent-lime);
+  background: rgba(204, 255, 0, 0.08);
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(204, 255, 0, 0.2);
+  transition: all var(--transition-fast);
+}
+
+.backToTopBtn:hover {
+  background: var(--accent-lime);
+  color: var(--text-dark);
+}
+
+@media (max-width: 900px) {
+  .footerGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+  }
+  .bottomBar {
+    justify-content: center;
+    flex-direction: column;
+  }
+}

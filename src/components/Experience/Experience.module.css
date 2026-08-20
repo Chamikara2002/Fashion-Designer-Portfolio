@@ -1,0 +1,159 @@
+.experienceSection {
+  background: rgba(14, 15, 20, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  position: relative;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  text-align: center;
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 0;
+  width: 100%;
+}
+
+.timelineLine {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: linear-gradient(180deg, var(--border-subtle) 0%, var(--accent-lime) 50%, var(--border-subtle) 100%);
+  transform: translateX(-50%);
+}
+
+.timelineItem {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+  position: relative;
+  margin-bottom: 60px;
+  width: 50%;
+}
+
+.timelineItemRight {
+  align-self: flex-end;
+  justify-content: flex-start;
+  padding-right: 0;
+  padding-left: 50px;
+  margin-left: auto;
+}
+
+.timelineNode {
+  position: absolute;
+  top: 24px;
+  right: -9px;
+  width: 18px;
+  height: 18px;
+  background: var(--bg-dark);
+  border: 3px solid var(--accent-lime);
+  border-radius: 50%;
+  box-shadow: 0 0 15px var(--accent-lime);
+  z-index: 5;
+}
+
+.timelineItemRight .timelineNode {
+  right: auto;
+  left: -9px;
+}
+
+.timelineCard {
+  background: rgba(18, 19, 26, 0.8);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  padding: 30px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.timelineCard:hover {
+  border-color: var(--accent-lime);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 30px var(--accent-lime-glow);
+  transform: translateY(-4px);
+}
+
+.timelineYear {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent-lime);
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.timelineRole {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.timelineCompany {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.timelineDesc {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.achievementList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.achievementItem {
+  font-size: 0.85rem;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.bulletDot {
+  width: 5px;
+  height: 5px;
+  background: var(--accent-lime);
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .timelineLine {
+    left: 20px;
+  }
+  .timelineItem, .timelineItemRight {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 0;
+    margin-left: 0;
+  }
+  .timelineNode, .timelineItemRight .timelineNode {
+    left: 11px;
+    right: auto;
+  }
+}
